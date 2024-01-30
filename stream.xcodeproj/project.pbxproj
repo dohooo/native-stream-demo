@@ -11,15 +11,19 @@
 		9E895B4D2B67E8E800459232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E895B4C2B67E8E800459232 /* ContentView.swift */; };
 		9E895B4F2B67E8E900459232 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E895B4E2B67E8E900459232 /* Assets.xcassets */; };
 		9E895B532B67E8E900459232 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E895B522B67E8E900459232 /* Preview Assets.xcassets */; };
+		BE1DF78C3A3AC577943AC0CB /* Pods_stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CBDD78D0D6AD813A1632D9 /* Pods_stream.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27CBDD78D0D6AD813A1632D9 /* Pods_stream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844A9567E6DA15657DFAFEA6 /* Pods-stream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.debug.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.debug.xcconfig"; sourceTree = "<group>"; };
 		9E895B472B67E8E800459232 /* stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E895B4A2B67E8E800459232 /* streamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = streamApp.swift; sourceTree = "<group>"; };
 		9E895B4C2B67E8E800459232 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E895B4E2B67E8E900459232 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E895B502B67E8E900459232 /* stream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stream.entitlements; sourceTree = "<group>"; };
 		9E895B522B67E8E900459232 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FECAEADFE3B91EC31F624C3E /* Pods-stream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.release.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1DF78C3A3AC577943AC0CB /* Pods_stream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		817623780330C041F6961A3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27CBDD78D0D6AD813A1632D9 /* Pods_stream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8954AABA62BD18C4942D5BB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				844A9567E6DA15657DFAFEA6 /* Pods-stream.debug.xcconfig */,
+				FECAEADFE3B91EC31F624C3E /* Pods-stream.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9E895B3E2B67E8E800459232 = {
 			isa = PBXGroup;
 			children = (
 				9E895B492B67E8E800459232 /* stream */,
 				9E895B482B67E8E800459232 /* Products */,
+				8954AABA62BD18C4942D5BB3 /* Pods */,
+				817623780330C041F6961A3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E895B562B67E8E900459232 /* Build configuration list for PBXNativeTarget "stream" */;
 			buildPhases = (
+				7C87194100C6916B11B6FEDD /* [CP] Check Pods Manifest.lock */,
 				9E895B432B67E8E800459232 /* Sources */,
 				9E895B442B67E8E800459232 /* Frameworks */,
 				9E895B452B67E8E800459232 /* Resources */,
+				2F04A963AFB93317883AE0E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F04A963AFB93317883AE0E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stream/Pods-stream-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stream/Pods-stream-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stream/Pods-stream-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C87194100C6916B11B6FEDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E895B432B67E8E800459232 /* Sources */ = {
@@ -263,6 +331,7 @@
 		};
 		9E895B572B67E8E900459232 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844A9567E6DA15657DFAFEA6 /* Pods-stream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -273,6 +342,7 @@
 				DEVELOPMENT_TEAM = 9AYPRU93J4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -285,8 +355,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.caspian.stream;
@@ -301,6 +370,7 @@
 		};
 		9E895B582B67E8E900459232 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FECAEADFE3B91EC31F624C3E /* Pods-stream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 				DEVELOPMENT_TEAM = 9AYPRU93J4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -323,8 +394,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.caspian.stream;
